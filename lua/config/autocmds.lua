@@ -16,3 +16,18 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+-- ################################################
+-- ##               LATEX   autocmd              ##
+-- ################################################
+-- Auto build latex when save the file
+-- use make command `Makefile` to build `Latex Project`
+vim.api.nvim_create_autocmd("BufWritePost", {
+  group = vim.api.nvim_create_augroup("texfilesave", { clear = true }),
+  pattern = "*.tex",
+  callback = function()
+    vim.fn.jobstart({ "make" }, {
+      stdout_buffered = false,
+    })
+  end,
+})
