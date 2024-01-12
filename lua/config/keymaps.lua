@@ -13,12 +13,6 @@ k.set("n", "<tab>", ":bn<cr>", opts) -- Next
 k.set("n", "<s-tab>", ":bN<cr>", opts) -- Preview
 k.set("n", "<leader>x", ":bd<cr>", opts) -- delete
 
--- Jump window
-k.set("n", "<leader>h", "<c-w>h")
-k.set("n", "<leader>j", "<c-w>j")
-k.set("n", "<leader>k", "<c-w>k")
-k.set("n", "<leader>l", "<c-w>l")
-k.set("n", "<leader><left>", "<c-w>h")
-k.set("n", "<leader><up>", "<c-w>j")
-k.set("n", "<leader><right>", "<c-w>l")
-k.set("n", "<leader><down>", "<c-w>k")
+-- mdip, Markdown Image Clip
+k.set("n", "<leader>pq", ":call mdip#MarkdownClipboardImage()<CR><ESC>")
+k.set("n", "<leader>pp", ":call mdip#MarkdownClipboardImageTitleMode()<CR><ESC>k$2F>")
