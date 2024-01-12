@@ -11,14 +11,14 @@
   margin-bottom: 0;
 }
 .markdown-body {
-  font-family: "Times New Roman", "LXGW WenKai Mono";
+  font-family: "Operator Mono Book", "Times New Roman", "LXGW WenKai Mono";
   font-size: 16px;
-  color: #333;
+  color: #c0caf5;
   line-height: 1.6;
   word-wrap: break-word;
   padding: 45px;
-  background: #222222;
-  border: 1px solid #ddd;
+  background: #24283b;
+  border: 1px solid #a9b1d6;
   -webkit-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
 }
@@ -161,13 +161,13 @@
   content: normal;
 }
 .markdown-body code {
-  font-family: "Fira Mono";
+  font-family: "Operator Mono Book";
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: #2e3c64;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -177,7 +177,7 @@
   content: "\00a0";
 }
 .markdown-body a {
-  color: #4078c0;
+  color: #7aa2f7;
   text-decoration: none;
   background: transparent;
 }
@@ -202,17 +202,17 @@
   list-style-type: none;
 }
 .task-list-item input {
-  font:
-    13px/1.4 Helvetica,
-    arial,
-    nimbussansl,
-    liberationsans,
-    freesans,
-    clean,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  /* font: */
+  /*   13px/1.4 Helvetica, */
+  /*   arial, */
+  /*   nimbussansl, */
+  /*   liberationsans, */
+  /*   freesans, */
+  /*   clean, */
+  /*   sans-serif, */
+  /*   "Apple Color Emoji", */
+  /*   "Segoe UI Emoji", */
+  /*   "Segoe UI Symbol"; */
   margin: 0 0.35em 0.25em -1.6em;
   vertical-align: middle;
 }
