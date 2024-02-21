@@ -51,4 +51,12 @@ return {
     enabled = true,
     ft = { "markdown" },
   },
+  { "dhruvasagar/vim-table-mode", ft = { "markdown" } },
+  {
+    "danymat/neogen",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = true,
+    -- Uncomment next line if you want to follow only stable versions
+    -- version = "*"
+  },
 }

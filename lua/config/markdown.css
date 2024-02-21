@@ -120,11 +120,11 @@
   border-spacing: 0;
 }
 .markdown-body table tr {
-  background-color: #222222;
+  background-color: #2ac3de;
   border-top: 1px solid #ccc;
 }
 .markdown-body table tr:nth-child(2n) {
-  background-color: #222222;
+  background-color: #2ac3de;
 }
 .markdown-body table th,
 .markdown-body table td {
@@ -137,7 +137,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #222222;
+  background-color: #bb9af7;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -161,15 +161,16 @@
   content: normal;
 }
 .markdown-body code {
-  font-family: "Operator Mono Book";
+  font-family: "OperatorMono Nerd Font"
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: #2e3c64;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 5px;
+  background-color: #bb9af7;
+  color: #292e42;
+  border-radius: 5px;
 }
 .markdown-body code:before,
 .markdown-body code:after {
