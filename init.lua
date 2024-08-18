@@ -10,4 +10,8 @@ lspconfig.clangd.setup({
     return util.find_git_ancestor(fname) or util.path.dirname(fname)
   end,
   -- 其他`clangd`配置项
+  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+  },
 })
