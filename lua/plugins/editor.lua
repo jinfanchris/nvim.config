@@ -29,10 +29,6 @@ return {
     build = "cd app && yarn install",
     init = function()
       vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    config = function()
       vim.g.mkdp_page_title = "${name}"
       vim.g.mkdp_auto_start = 0
       vim.g.mkdp_auto_close = 0 -- auto close current preview window change from markdown buffer to another buffer.
@@ -41,10 +37,12 @@ return {
       -- FOR detailed : "https://github.com/iamcco/markdown-preview.nvim/pull/9"
       vim.g.mkdp_port = "9090"
       vim.g.mkdp_echo_preview_url = 1 -- Echo preview page url in command line
-      vim.g.mkdp_browser = "/usr/bin/min" -- Set Browser to surf
-      vim.g.mkdp_markdown_css = "/home/christopher/.config/nvim/lua/config/markdown.css"
+      -- vim.g.mkdp_browser = "/usr/bin/min" -- Set Browser to surf
+      vim.g.mkdp_markdown_css = "expand(~/.config/nvim/lua/config/markdown.css)"
       vim.cmd([[do FileType]])
     end,
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
   },
   {
     "jbyuki/venn.nvim",

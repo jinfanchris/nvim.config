@@ -11,9 +11,10 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 -- Disable the concealing in some file formats
 -- The default conceallevel is 3 in LazyVim
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "json", "jsonc", "markdown" },
+  pattern = "*",
   callback = function()
-    vim.opt.conceallevel = 0
+    vim.wo.conceallevel = 0
+    vim.wo.spell = false
   end,
 })
 
@@ -22,15 +23,15 @@ vim.api.nvim_create_autocmd("FileType", {
 -- ################################################
 -- Auto build latex when save the file
 -- use make command `Makefile` to build `Latex Project`
-vim.api.nvim_create_autocmd("BufWritePost", {
-  group = vim.api.nvim_create_augroup("texfilesave", { clear = true }),
-  pattern = "*.tex",
-  callback = function()
-    vim.fn.jobstart({ "make" }, {
-      stdout_buffered = false,
-    })
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--   group = vim.api.nvim_create_augroup("texfilesave", { clear = true }),
+--   pattern = "*.tex",
+--   callback = function()
+--     vim.fn.jobstart({ "make" }, {
+--       stdout_buffered = false,
+--     })
+--   end,
+-- })
 
 -- ################################################
 -- ##               V E N N  begin               ##
@@ -56,3 +57,20 @@ function _G.Toggle_venn()
 end
 -- toggle keymappings for venn using <leader>v
 vim.api.nvim_set_keymap("n", "<leader>v", ":lua Toggle_venn()<CR>", { noremap = true })
+
+-- Remove Table Render in Markdown which is annoying
+require("render-markdown").setup({
+  pipe_table = { style = "normal" },
+  code = {
+    position = "right",
+    width = "block",
+    right_pad = 10,
+  },
+  checkbox = {
+    custom = {
+      important = { raw = "[~]", rendered = "󰓎 ", highlight = "DiagnosticWarn" },
+      wrong = { raw = "[*]", rendered = "✘ ", highlight = "RenderMarkdownError" },
+      right = { raw = "[v]", rendered = "✔ ", highlight = "RenderMarkdownSuccess" },
+    },
+  },
+})

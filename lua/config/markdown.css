@@ -10,6 +10,40 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+:root {
+  --color-text-primary: #333;
+  --color-text-tertiary: #777;
+  --color-text-link: #4078c0;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #fafbfc;
+  --color-bg-tertiary: #f8f8f8;
+  --color-border-primary: #ddd;
+  --color-border-secondary: #eaecef;
+  --color-border-tertiary: #d1d5da;
+  --color-kbd-foreground: #444d56;
+  --color-markdown-blockquote-border: #dfe2e5;
+  --color-markdown-table-border: #dfe2e5;
+  --color-markdown-table-tr-border: #c6cbd1;
+  --color-markdown-code-bg: #1b1f230d;
+}
+[data-theme="dark"] {
+  --color-text-primary: #c9d1d9;
+  --color-text-tertiary: #8b949e;
+  --color-text-link: #58a6ff;
+  --color-bg-primary: #0d1117;
+  --color-bg-secondary: #0d1117;
+  --color-bg-tertiary: #161b22;
+  --color-border-primary: #30363d;
+  --color-border-secondary: #21262d;
+  --color-border-tertiary: #6e7681;
+  --color-kbd-foreground: #b1bac4;
+  --color-markdown-blockquote-border: #3b434b;
+  --color-markdown-table-border: #3b434b;
+  --color-markdown-table-tr-border: #272c32;
+  --color-markdown-code-bg: #f0f6fc26;
+}
+
 .markdown-body {
   font-family: "Operator Mono Book", "Times New Roman", "LXGW WenKai Mono";
   font-size: 16px;
@@ -17,7 +51,7 @@
   line-height: 1.6;
   word-wrap: break-word;
   padding: 45px;
-  background: #24283b;
+  background: var(--color-bg-primary);
   border: 1px solid #a9b1d6;
   -webkit-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
@@ -161,7 +195,7 @@
   content: normal;
 }
 .markdown-body code {
-  font-family: "OperatorMono Nerd Font"
+  font-family: "Operator Nerd Book";
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
