@@ -45,9 +45,9 @@
 }
 
 .markdown-body {
-  font-family: "Operator Mono Book", "Times New Roman", "LXGW WenKai Mono";
+  font-family: "Operator Mono Book", "Times", "LXGW WenKai Mono";
   font-size: 16px;
-  color: #c0caf5;
+  color: #101a15;
   line-height: 1.6;
   word-wrap: break-word;
   padding: 45px;
@@ -171,7 +171,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #bb9af7;
+  background-color: #efefef;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -195,14 +195,14 @@
   content: normal;
 }
 .markdown-body code {
-  font-family: "Operator Nerd Book";
+  font-family: "FiraCode Nerd Font", "Monaco";
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
   -webkit-border-radius: 5px;
-  background-color: #bb9af7;
+  background-color: #ebeae7;
   color: #292e42;
   border-radius: 5px;
 }

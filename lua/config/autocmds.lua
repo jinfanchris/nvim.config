@@ -59,18 +59,21 @@ end
 vim.api.nvim_set_keymap("n", "<leader>v", ":lua Toggle_venn()<CR>", { noremap = true })
 
 -- Remove Table Render in Markdown which is annoying
-require("render-markdown").setup({
-  pipe_table = { style = "normal" },
-  code = {
-    position = "right",
-    width = "block",
-    right_pad = 10,
-  },
-  checkbox = {
-    custom = {
-      important = { raw = "[~]", rendered = "󰓎 ", highlight = "DiagnosticWarn" },
-      wrong = { raw = "[*]", rendered = "✘ ", highlight = "RenderMarkdownError" },
-      right = { raw = "[v]", rendered = "✔ ", highlight = "RenderMarkdownSuccess" },
-    },
-  },
-})
+-- require("render-markdown").setup({
+--   pipe_table = { style = "normal" },
+--   code = {
+--     position = "right",
+--     width = "block",
+--     right_pad = 10,
+--   },
+--   only_render_image_at_cursor = true,
+--   checkbox = {
+--     custom = {
+--       important = { raw = "[~]", rendered = "󰓎 ", highlight = "DiagnosticWarn" },
+--       wrong = { raw = "[*]", rendered = "✘ ", highlight = "RenderMarkdownError" },
+--       right = { raw = "[v]", rendered = "✔ ", highlight = "RenderMarkdownSuccess" },
+--     },
+--   },
+-- })
+
+-- vim.api.nvim_command("colorscheme vim")

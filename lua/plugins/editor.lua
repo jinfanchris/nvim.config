@@ -27,9 +27,9 @@ return {
   {
     "iamcco/markdown-preview.nvim",
     build = "cd app && yarn install",
-    init = function()
+    config = function()
       vim.g.mkdp_filetypes = { "markdown" }
-      vim.g.mkdp_page_title = "${name}"
+      vim.g.mkdp_page_title = "${name}-New"
       vim.g.mkdp_auto_start = 0
       vim.g.mkdp_auto_close = 0 -- auto close current preview window change from markdown buffer to another buffer.
       vim.g.mkdp_open_to_the_world = 1 -- preview server available to others in the network
@@ -38,8 +38,7 @@ return {
       vim.g.mkdp_port = "9090"
       vim.g.mkdp_echo_preview_url = 1 -- Echo preview page url in command line
       -- vim.g.mkdp_browser = "/usr/bin/min" -- Set Browser to surf
-      vim.g.mkdp_markdown_css = "expand(~/.config/nvim/lua/config/markdown.css)"
-      vim.cmd([[do FileType]])
+      vim.g.mkdp_markdown_css = vim.fn.expand("~/.config/nvim/lua/config/markdown.css")
     end,
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
@@ -47,7 +46,7 @@ return {
   {
     "jbyuki/venn.nvim",
     enabled = true,
-    ft = { "markdown" },
+    ft = { "markdown", "text" },
   },
   { "dhruvasagar/vim-table-mode", ft = { "markdown" } },
   {
@@ -56,5 +55,42 @@ return {
     config = true,
     -- Uncomment next line if you want to follow only stable versions
     -- version = "*"
+  },
+  {
+    -- Image Plugin for markdown
+    "3rd/image.nvim",
+    config = function()
+      -- ...
+    end,
+  },
+  {
+    "samodostal/image.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    -- dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {
+      pipe_table = { style = "normal" },
+      code = {
+        position = "right",
+        width = "block",
+        right_pad = 10,
+      },
+      only_render_image_at_cursor = true,
+      checkbox = {
+        custom = {
+          important = { raw = "[~]", rendered = "󰓎 ", highlight = "DiagnosticWarn" },
+          wrong = { raw = "[*]", rendered = "✘ ", highlight = "RenderMarkdownError" },
+          right = { raw = "[v]", rendered = "✔ ", highlight = "RenderMarkdownSuccess" },
+        },
+      },
+    },
   },
 }
