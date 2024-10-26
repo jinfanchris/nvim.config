@@ -75,5 +75,4 @@ vim.api.nvim_set_keymap("n", "<leader>v", ":lua Toggle_venn()<CR>", { noremap = 
 --     },
 --   },
 -- })
-
 -- vim.api.nvim_command("colorscheme vim")
