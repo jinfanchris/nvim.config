@@ -16,27 +16,7 @@ lspconfig.clangd.setup({
   },
 })
 
----- p4 analyzer
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = "*.p4",
-  callback = function()
-    vim.bo.filetype = "p4"
-  end,
-})
-
--- local configs = require("lspconfig.configs")
--- if not configs.p4analyzer then
---   configs.p4analyzer = {
---     default_config = {
---       cmd = {
---         "p4analyzer",
---         "--stdio",
---         "--logpath",
---         "/home/christopher/p4-logs/",
---       },
---       root_dir = lspconfig.util.root_pattern(".git"),
---       filetypes = { "p4" },
---     },
---   }
--- end
--- lspconfig.p4analyzer.setup({})
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
+vim.o.expandtab = true
