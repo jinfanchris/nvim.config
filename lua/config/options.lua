@@ -4,3 +4,4 @@
 
 -- Set Wrap
 vim.wo.wrap = true
+vim.opt.clipboard = "unnamedplus"
