@@ -179,4 +179,7 @@ return {
       })
     end,
   },
+  {
+    "wadackel/vim-dogrun",
+  },
 }
