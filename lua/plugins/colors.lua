@@ -182,4 +182,8 @@ return {
   {
     "wadackel/vim-dogrun",
   },
+  {
+    "challenger-deep-theme/vim",
+    name = "challenger-deep",
+  },
 }
