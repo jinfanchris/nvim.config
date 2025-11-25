@@ -186,4 +186,11 @@ return {
     "challenger-deep-theme/vim",
     name = "challenger-deep",
   },
+
+  {
+    "miikanissi/modus-themes.nvim",
+  },
+  {
+    "endel/vim-github-colorscheme",
+  },
 }

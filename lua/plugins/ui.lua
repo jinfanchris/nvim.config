@@ -444,6 +444,7 @@ local colors = {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "cyberdream",
+      -- colorscheme = "zaibatsu",
       -- colorscheme = "bamboo",
     },
   },
